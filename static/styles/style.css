@@ -1,0 +1,18 @@
+#canvas-container,#info {
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+}
+
+#canvas {
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+#resultado {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+}
+

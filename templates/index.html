@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red_neuronal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+
+</head>
+
+<body>
+    <div>
+        <div id="canvas-container">
+            <h2>Red neuronal con Tensorflow y Keras</h2>
+
+            <canvas id="canvas" width="280" height="280"></canvas>
+            <div id="resultado"></div>
+
+            <p><b>Alumno: </b>LUQUE ZELADA, DANTE FABIAN</p>
+            <p><b>Institución: </b>SENATI</p>
+            <p><b>Instructor: </b>JESUS VALERIO FLORES CANCHARI</p>
+            <p>Un modelo entrenado con el dataset MNIST para identificar<br>
+                digitos escritos en el recuadro (por el momento, solo identifica del 0 al 9)<br>
+                <span>El modelo no es perfecto, pero posee una precisión del 90% aprox.</span>
+            </p>
+        </div>
+        
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script src="{{ url_for('static', filename='scripts/script.js') }}"></script>
+</body>
+
+</html>
