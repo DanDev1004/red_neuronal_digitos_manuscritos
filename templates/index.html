@@ -29,9 +29,13 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
-    <script>
-        var appUrl = "{{ app_url }}";  
-    </script>
+        <script>
+            var appUrl = "{{ app_url }}";
+            if (!appUrl || appUrl === 'http://localhost:8000') {
+                appUrl = window.location.origin;  
+            }
+        </script>
+
     <script src="{{ url_for('static', filename='scripts/script.js') }}"></script>
 </body>
 
