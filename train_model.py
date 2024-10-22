@@ -28,7 +28,7 @@ def train_and_save_model():
 
     modelo.fit(conjunto_entrenamiento, epochs=5, steps_per_epoch=math.ceil(num_ejemplos_entrenamiento / TAMANO_BATCH))
 
-    modelo.save('mnist_model.h5')  # Guardar el modelo
+    modelo.save('mnist_model.h5')#guardando modelo
 
 if __name__ == "__main__":
     train_and_save_model()

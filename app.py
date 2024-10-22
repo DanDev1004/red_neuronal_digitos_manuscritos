@@ -5,15 +5,18 @@ import numpy as np
 import os
 from dotenv import load_dotenv
 
+#cargando variables de entorno
 load_dotenv()
 app_url = os.getenv("FLASK_APP_URL")
 
+#indicamos que no usaremos GPU
 os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
 
+#url generada por render
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "https://red_neuronal_digitos_dan.onrender.com"}})
 
-# Cargar el modelo preentrenado
+#cargando el modelo preentrenado
 modelo = tf.keras.models.load_model('mnist_model.h5')
 
 @app.route('/')
