@@ -52,10 +52,10 @@ lienzo.onmouseup = function () {
 
 
     //mandamos la información en una solicitud POST
-    $.post("http://localhost:8000/predict", { pixeles: pixeles.join(",") },
+    $.post(`${appUrl}/predict`, { pixeles: pixeles.join(",") },
         function (respuesta) {
             //imprimimos resultado en consola y en la etiqueta html
-            console.log("Resultado: " + respuesta.prediccion); 
+            console.log("Resultado: " + respuesta.prediccion);
             $("#resultado").html("Predicción: " + respuesta.prediccion);
         }
     );

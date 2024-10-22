@@ -5,6 +5,12 @@ import tensorflow_datasets as tfds #conjunto de datos
 from sklearn.metrics import r2_score #calificación de la precisión en nuestros modelos
 import numpy as np #para manejar arrays
 import math #matematica basica 
+import os
+from dotenv import load_dotenv #variables de entorno
+
+
+load_dotenv() 
+app_url = os.getenv("FLASK_APP_URL") 
 
 
 #Creamos la app y habilitamos CORS
@@ -78,7 +84,7 @@ print(f"Puntuación R²: {r2:.4f}")
 #ruta raiz 
 @app.route('/')
 def home():
-    return render_template('index.html')
+    return render_template('index.html', app_url=app_url)
 
 
 

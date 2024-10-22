@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Red_neuronal</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
-
 </head>
 
 <body>
@@ -25,12 +24,14 @@
                 <span>El modelo no es perfecto, pero posee una precisión del 90% aprox.</span>
             </p>
         </div>
-        
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
+    <script>
+        var appUrl = "{{ app_url }}";  
+    </script>
     <script src="{{ url_for('static', filename='scripts/script.js') }}"></script>
 </body>
 
