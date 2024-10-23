@@ -9,6 +9,8 @@ Puede verificar el resultado aquí: [Link de la app](https://red-neuronal-digito
 
 Tal vez sea un poco lenta debido a que está desplegado en un servidor gratuito.
 
+### SOLO FUNCIONA EN PC POR EL MOMENTO, ya que solo detecta eventos del mouse 
+
 Esta versión está estructurada para funcionar de forma local, instalando las dependencias en un entorno virtual:
 
 ```bash
